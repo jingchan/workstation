@@ -1,5 +1,5 @@
 [alias]
-	x = log --oneline --graph --all -n 40
+	x = log --oneline --graph --all -n 30
 [user]
 	email = jingchan@gmail.com
 	name = Jing Chan
