@@ -10,7 +10,12 @@ RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 COPY ./dotfiles /usr/home
 
 # HTTP Server
-RUN npm i
+RUN mkdir -p /usr/app
+WORKDIR /usr/app
+
+# Install app dependencies
+COPY package.json /usr/app/
+RUN npm --production install
 RUN npm run start &
 
 # SSH Server
