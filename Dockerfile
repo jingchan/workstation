@@ -15,6 +15,7 @@ WORKDIR /usr/app
 
 # Install app dependencies
 COPY package.json /usr/app/
+COPY index.js /usr/app
 RUN npm --production install
 
 # SSH Server
