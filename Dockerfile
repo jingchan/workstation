@@ -16,7 +16,6 @@ WORKDIR /usr/app
 # Install app dependencies
 COPY package.json /usr/app/
 RUN npm --production install
-RUN npm run start &
 
 # SSH Server
 RUN mkdir /run/sshd
@@ -34,5 +33,5 @@ EXPOSE 80 8080 22   60001-60010/udp
 
 #ENTRYPOINT ["mosh-server"]
 
-CMD ["/usr/sbin/sshd", "-D"]
-
+#CMD ["/usr/sbin/sshd", "-D"]
+CMD ["entrypoint.sh"]

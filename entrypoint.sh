@@ -2,7 +2,10 @@
 
 set -e
 
-if [ ! -d ~/dotfiles ]; then
-  echo 'Cloning dotfiles'
+#if [ ! -d ~/dotfiles ]; then
+#  echo 'Cloning dotfiles'
+#fi
 
-fi
+npm run start &
+/usr/sbin/sshd -D
+
