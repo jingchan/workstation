@@ -7,7 +7,7 @@ RUN apt-get update && apt-get -y upgrade \
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-COPY ./dotfiles /usr/home
+#COPY ./dotfiles /usr/home
 
 # HTTP Server
 RUN mkdir -p /usr/app
@@ -34,4 +34,5 @@ EXPOSE 80 8080 22   60001-60010/udp
 #ENTRYPOINT ["mosh-server"]
 
 #CMD ["/usr/sbin/sshd", "-D"]
-CMD ["entrypoint.sh"]
+COPY entrypoint.sh /usr/app
+CMD ["./entrypoint.sh"]
