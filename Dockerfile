@@ -10,8 +10,8 @@ RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 COPY ./dotfiles /usr/home
 
 # HTTP Server
-RUN npm i -g http-server
-RUN http-server . -p 80 &
+RUN npm i
+RUN npm run start &
 
 # SSH Server
 RUN mkdir /run/sshd
