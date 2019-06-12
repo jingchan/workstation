@@ -1,13 +1,17 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get -y upgrade \
-    && apt-get install -y mosh curl openssh-server
+   && apt-get install -y mosh curl openssh-server \
+   nodejs npm
 
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 COPY ./dotfiles /usr/home
 
+# HTTP Server
+RUN npm i -g http-server
+RUN http-server . -p 80 &
 
 # SSH Server
 RUN mkdir /run/sshd
