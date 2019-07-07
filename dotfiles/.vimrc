@@ -35,6 +35,8 @@ set omnifunc=syntaxcomplete#Complete
 set backupcopy=yes
 
 set colorcolumn=80
+highlight ColorColumn ctermbg=magenta
+"call matchadd('ColorColumn', '\%81v', 100)
 
 " Install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -55,3 +57,8 @@ map <C-n> :NERDTreeToggle<CR>
 " Enhance YCM JS complete with tern
 autocmd FileType javascript setlocal omnifunc=tern#Complete
 set completeopt-=preview
+
+inoremap jj <esc>
+inoremap kj <esc>
+inoremap jk <esc>
+inoremap kk <esc>
