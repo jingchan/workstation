@@ -50,6 +50,7 @@ Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'Valloric/YouCompleteMe'
+Plug 'vim-scripts/ctrlp.vim'
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
