@@ -55,6 +55,7 @@ Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-scripts/ctrlp.vim'
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
