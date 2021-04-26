@@ -30,18 +30,21 @@ set incsearch
 " Move screen when 7 lines away from edge
 set scrolloff=7
 
-" Add autocompletion
-"set omnifunc=syntaxcomplete#Complete
-
 " For faster completions and better user experience, decrease updatetime
-" from 4000ms to 300ms
+" from 4000ms to 300ms.
 set updatetime=300
   
 set backupcopy=yes
 
-set colorcolumn=80
+" Add highlighting for column 81 for formatting purposes.
+set colorcolumn=81
 highlight ColorColumn ctermbg=magenta
-"call matchadd('ColorColumn', '\%81v', 100)
+
+" Turn on smartcase, only use case sensitive search if there's an uppercased
+" letter.
+set ignorecase
+set smartcase
+
 
 " Install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -59,11 +62,6 @@ Plug 'vim-scripts/ctrlp.vim'
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
-
-" Enhance YCM JS complete with tern
-autocmd FileType javascript setlocal omnifunc=tern#Complete
-"set completeopt-=preview
-
 
 " CoC config
 " Use tab for trigger completion with characters ahead and navigate.
