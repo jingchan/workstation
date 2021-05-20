@@ -45,6 +45,8 @@ highlight ColorColumn ctermbg=magenta
 set ignorecase
 set smartcase
 
+" Set background to dark to make colors easier to see.
+set background=dark
 
 " Install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
