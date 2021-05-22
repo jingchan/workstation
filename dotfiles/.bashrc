@@ -119,6 +119,8 @@ fi
 
 export GOOGLE_APPLICATION_CREDENTIALS="/home/jingchan/pixedycred.json"
 
+# Add completions to npm
+source <(npm completion)
 
 # cd to user directory
 cd
