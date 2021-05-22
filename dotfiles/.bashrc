@@ -118,3 +118,13 @@ fi
 
 
 export GOOGLE_APPLICATION_CREDENTIALS="/home/jingchan/pixedycred.json"
+
+
+# cd to user directory
+cd
+
+# Open tmux and attach to session 0 (create if doesn't exist)
+if [ -z "$TMUX" ] && [ ${UID} != 0 ]
+then
+  tmux new-session -A -s 0
+fi
