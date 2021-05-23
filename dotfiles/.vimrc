@@ -92,8 +92,14 @@ endif
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+" Use ag if available for ctrl-p.
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+endif
 
+" Custom escape mappings
 inoremap jj <esc>
 inoremap kj <esc>
 inoremap jk <esc>
 inoremap kk <esc>
+
