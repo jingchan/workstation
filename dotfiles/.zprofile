@@ -1,6 +1,7 @@
 # Add `brew` to path.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Out-out of analytics for Homebrew.
-export HOMEBREW_NO_ANALYTICS=1
+# Zsh to use the same colors as ls
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}  
 
+alias ls=ls -G
