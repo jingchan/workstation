@@ -5,3 +5,4 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}  
 
 alias ls=ls -G
+alias blaze=bazel
