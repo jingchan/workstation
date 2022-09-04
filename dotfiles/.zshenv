@@ -15,5 +15,3 @@ export PATH=$PATH:/Users/jingchan/.bin
 
 # Python
 export PATH=/opt/homebrew/opt/python@3.9/libexec/bin:$PATH
-
-
