@@ -11,7 +11,9 @@ chmod -R go-w '/opt/homebrew/share/zsh'
 # brew install node
 
 # Install rust
-# brew install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install bazel
 brew install bazelisk
+
+
