@@ -7,6 +7,7 @@
 # installed from through `homebrew`.
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
   autoload -Uz compinit
   compinit
 fi
@@ -14,8 +15,9 @@ fi
 # _`ZSH` Beeps_
 #
 # These can be annoying, so we like to turn them off.
-
-# Turn off all beeps.
 unsetopt BEEP
-# Turn off autocomplete beeps.
+# Turn off autocomplete beeps
 # unsetopt LIST_BEEP
+
+
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

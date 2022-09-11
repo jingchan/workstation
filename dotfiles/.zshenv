@@ -15,3 +15,10 @@ export PATH=$PATH:/Users/jingchan/.bin
 
 # Python
 export PATH=/opt/homebrew/opt/python@3.9/libexec/bin:$PATH
+
+# LLVM
+#export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib -Wl,-rpath,/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+
