@@ -15,9 +15,6 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$PATH:/Users/jingchan/.bin
 
-# Python
-export PATH=$(brew --prefix)/opt/python/libexec/bin
-
 # LLVM
 #export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib -Wl,-rpath,/opt/homebrew/opt/llvm/lib"

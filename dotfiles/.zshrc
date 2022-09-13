@@ -10,3 +10,7 @@ fi
 unsetopt BEEP
 # Turn off autocomplete beeps
 # unsetopt LIST_BEEP
+
+# Python
+export PATH=$PATH:$(brew --prefix)/opt/python/libexec/bin
+
