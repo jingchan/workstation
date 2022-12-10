@@ -4,3 +4,12 @@
 [user]
 	email = jingchan@gmail.com
 	name = Jing Chan
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[log]
+	abbrevCommit = true
+[format]
+	pretty = oneline
