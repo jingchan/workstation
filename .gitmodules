@@ -1,3 +1,6 @@
 [submodule "dracula-terminal"]
 	path = dracula-terminal
 	url = git@github.com:dracula/terminal-app
+[submodule "dracula-iterm"]
+	path = dracula-iterm
+	url = https://github.com/dracula/iterm.git
