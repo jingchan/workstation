@@ -1,15 +1,57 @@
-local status_ok, copilot = pcall(require, "copilot")
+local status_ok, copilot = pcall(require, 'copilot')
 if not status_ok then
   return
 end
 
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+copilot.setup({
+  panel = {
+    enabled = true,
+    auto_refresh = false,
+    keymap = {
+      jump_prev = '[[',
+      jump_next = ']]',
+      accept = '<CR>',
+      refresh = 'gr',
+      open = '<M-CR>',
+    },
+  },
+  suggestion = {
+    enabled = true,
+    auto_trigger = true,
+    debounce = 50,
+    -- debounce = 75,
+    keymap = {
+      accept = '<M-l>',
+      -- accept = '<TAB>',
+      accept_word = false,
+      accept_line = false,
+      -- next = '<C-]>',
+      -- prev = '<C-[>',
+      next = '<M-]>',
+      prev = '<M-[>',
+      dismiss = '<C-]>',
+    },
+  },
+  filetypes = {
+    yaml = false,
+    markdown = false,
+    help = false,
+    gitcommit = false,
+    gitrebase = false,
+    hgcommit = false,
+    svn = false,
+    cvs = false,
+    ['.'] = false,
+  },
+  copilot_node_command = 'node', -- Node.js version must be > 16.x
+  server_opts_overrides = {},
+})
 
-vim.g.copilot_no_tab_map = true
-
--- Set keybindings for Copilot
-keymap("n", "<leader>cp", ":Copilot<CR>", opts)
-keymap("v", "<leader>cp", ":Copilot<CR>", opts)
-keymap("n", "<leader>ca", ":Copilot!<CR>", opts)
-keymap("v", "<leader>ca", ":Copilot!<CR>", opts)
+-- local opts = { noremap = true, silent = true }
+-- vim.g.copilot_no_tab_map = true
+--
+-- -- Ask Copilot to make a suggestion, also mapped to cmd+k, cmd+u from iTerm.
+-- vim.keymap.set('n', '<C-k><C-u>', 'i<Plug>(copilot-suggest)', opts)
+-- vim.keymap.set('i', '<C-k><C-u>', '<Plug>(copilot-suggest)', opts)
+-- vim.keymap.set('i', '<C-k><C-n>', '<Plug>(copilot-next)', opts)
+-- vim.keymap.set('i', '<C-k><C-p>', '<Plug>(copilot-prev)', opts)

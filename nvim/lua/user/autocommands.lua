@@ -1,3 +1,21 @@
+-- A global group for all your config autocommands
+local startup_config_group = vim.api.nvim_create_augroup('StartupGroup', {})
+
+-- vim.api.nvim_create_autocmd({ 'User' }, {
+--   pattern = 'SessionLoadPre',
+--   group = startup_config_group,
+--   callback = function()
+--     -- Maybe load Alpha here.  Just disable for now.
+--   end,
+-- })
+
+--vim.api.nvim_create_autocmd({ 'SessionLoadPost' }, {
+--  group = startup_config_group,
+--  callback = function()
+--    require('user.nvim-tree').open()
+--  end,
+--})
+
 vim.cmd([[
   augroup _general_settings
     autocmd!
@@ -24,10 +42,10 @@ vim.cmd([[
     autocmd VimResized * tabdo wincmd = 
   augroup end
 
-  augroup _alpha
-    autocmd!
-    autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
-  augroup end
+  " augroup _alpha
+  "   autocmd!
+  "   autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
+  " augroup end
 
   " Autoformat
   " augroup _lsp
