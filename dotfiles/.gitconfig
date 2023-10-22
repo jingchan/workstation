@@ -2,7 +2,7 @@
 	x = log --oneline --graph --all -n 30
 	co = checkout
 [user]
-	email = jingchan@gmail.com
+	email = 368061+jingchan@users.noreply.github.com
 	name = Jing Chan
 [filter "lfs"]
 	required = true
